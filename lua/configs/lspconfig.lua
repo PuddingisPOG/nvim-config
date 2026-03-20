@@ -1,6 +1,6 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = {"clangd", "pyright", "tinymist", "harper_ls",}
+local servers = {"clangd", "pyright", "tinymist", "harper_ls", "css"}
 
 vim.lsp.config("tinymist",{
   settings = {
