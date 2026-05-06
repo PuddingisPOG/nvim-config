@@ -1,10 +1,12 @@
 Hey! This is a repo for the Neovim configuration that I use every day.
 
+**Note: This repository is a mirror of the one on [Codeberg](https://codeberg.org/PuddingisPOG/nvim-config).**
+
 # Install
 
 Clone this repository:
 
-`git clone https://github.com/PuddingisPOG/nvim-config`
+`git clone https://codeberg.org/PuddingisPOG/nvim-config.git`
 
 You then may or may not (I forgot) have to run `:Lazy sync` inside Neovim on startup so that all the plugins install.
 
