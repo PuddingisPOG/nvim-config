@@ -43,7 +43,7 @@ return {
         cppdbg = function(config)
           local my_cpp_configs = {
             {
-              name = "Launch file",
+              name = "Launch current file",
               type = "cppdbg",
               request = "launch",
               program = function()
@@ -66,6 +66,16 @@ return {
                   ignoreFailures = false
                 },
               },
+            },
+            {
+              name = "Choose a file\n",
+              type = "cppdbg",
+              request = "launch",
+              program = function()
+                return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+              end,
+              cwd = '${workspaceFolder}',
+              stopAtEntry = true,
             },
           }
           config.configurations = my_cpp_configs
