@@ -38,6 +38,7 @@ M.ui = {
     theme = "default",
     order = { "mode", "file", "git", "%=", --[["macro", "cmd",]] "diagnostics", "lsp", "cwd", "cursor" },
     modules = {
+      -- uncomment these lines (and the partial comment 2 lines above) for noice.
       -- macro = function()
       --   local recording = vim.fn.reg_recording()
       --   if recording ~= "" then

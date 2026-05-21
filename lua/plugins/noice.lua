@@ -1,4 +1,6 @@
 return {
+  -- Uncomment the Below to activate noice.
+  -- Also look at options.lua and chadrc.lua for what to uncomment to turn on noice.
   -- {
   --   "folke/noice.nvim",
   --   -- enabled = false,
