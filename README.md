@@ -1,6 +1,6 @@
 Hey! This is a repo for the Neovim configuration that I use every day.
 
-**Note: This repository is a mirror of the one on [Codeberg](https://codeberg.org/PuddingisPOG/nvim-config).**
+**Note: The [GitHub repository](https://github.com/PuddingisPOG/nvim-config) is a mirror of the [Codeberg repository](https://codeberg.org/PuddingisPOG/nvim-config).**
 
 # Install
 
