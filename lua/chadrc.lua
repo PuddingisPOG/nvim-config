@@ -36,18 +36,19 @@ M.ui = {
   },
   statusline = {
     theme = "default",
-    order = { "mode", "file", "git", "%=", "macro", "cmd", "diagnostics", "lsp", "cwd", "cursor" },
+    order = { "mode", "file", "git", "%=", --[["macro", "cmd",]] "diagnostics", "lsp", "cwd", "cursor" },
     modules = {
-      macro = function()
-        local recording = vim.fn.reg_recording()
-        if recording ~= "" then
-          return "%#StText# recording @" .. recording .. " "
-        end
-        return ""
-      end,
-      cmd = function()
-        return "%#StText# %S "  -- %S is the native showcmd statusline item
-      end,
+      -- uncomment these lines (and the partial comment 2 lines above) for noice.
+      -- macro = function()
+      --   local recording = vim.fn.reg_recording()
+      --   if recording ~= "" then
+      --     return "%#StText# recording @" .. recording .. " "
+      --   end
+      --   return ""
+      -- end,
+      -- cmd = function()
+      --   return "%#StText# %S "  -- %S is the native showcmd statusline item
+      -- end,
     },
   },
 }
