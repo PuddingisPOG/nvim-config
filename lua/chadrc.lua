@@ -56,7 +56,7 @@ M.ui = {
 vim.api.nvim_create_autocmd("TermOpen", {
   pattern = "*",
   callback = function()
-    -- Unset all terminal colors so Ghostty's colors are used
+    -- Unset all terminal colors so that the original terminal's colors are used
     for i = 0, 15 do
       vim.g['terminal_color_' .. i] = nil
     end
