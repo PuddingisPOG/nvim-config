@@ -4,7 +4,9 @@ Hey! This is a repo for the Neovim configuration that I use every day.
 
 # Install
 
-Clone this repository:
+First make sure you have the latest version of Neovim as otherwise some plugins may not work.
+
+Then, clone this repository:
 
 `git clone https://codeberg.org/PuddingisPOG/nvim-config.git`
 
@@ -14,7 +16,7 @@ Making sure that you have `npm` and `tree-sitter-cli` installed, run `:TSInstall
 
 If you optionally (but I strongly recommend) want [Telescope](https://github.com/nvim-telescope/telescope.nvim) to work, make sure you have `ripgrep` installed.
 
-You may now delete the `.git` folder, so you can go ahead and make your own changes to the configuration :)
+You may now delete the `.git` folder inside your config, so you can go ahead and make your own changes to the configuration :)
 
 # Uninstall
 
@@ -27,7 +29,6 @@ rm -rf ~/.local/share/nvim
 ```
 
 For more detail, especially if you're on windows or have installed Neovim from Flatpak check the [NvChad Docs](https://nvchad.com/docs/quickstart/install/).
-
 
 # Credits
 
