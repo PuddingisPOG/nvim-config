@@ -19,6 +19,7 @@ M.mason = {
   pkgs = {
     "cpptools",
     "clangd",
+    "clang-format",
     "harper-ls",
     "debugpy",
     "pyright",
