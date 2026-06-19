@@ -1,18 +1,17 @@
--- This file needs to have same structure as nvconfig.lua 
+-- This file needs to have same structure as nvconfig.lua
 -- https://github.com/NvChad/ui/blob/v3.0/lua/nvconfig.lua
--- Please read that file to know all available options :( 
+-- Please read that file to know all available options :(
 
 ---@type ChadrcConfig
 local M = {}
 
 M.base46 = {
-	theme = "rosepine",
+  theme = "rosepine",
 
-	hl_override = {
-		Comment = { italic = true },
-		["@comment"] = { italic = true },
-	},
-
+  hl_override = {
+    Comment = { italic = true },
+    ["@comment"] = { italic = true },
+  },
 }
 
 M.mason = {
@@ -28,7 +27,7 @@ M.mason = {
     "tinymist",
     "css-lsp",
     "html-lsp",
-  }
+  },
 }
 
 M.nvdash = { load_on_startup = true }
@@ -39,7 +38,16 @@ M.ui = {
   },
   statusline = {
     theme = "default",
-    order = { "mode", "file", "git", "%=", --[["macro", "cmd",]] "diagnostics", "lsp", "cwd", "cursor" },
+    order = {
+      "mode",
+      "file",
+      "git",
+      "%=", --[["macro", "cmd",]]
+      "diagnostics",
+      "lsp",
+      "cwd",
+      "cursor",
+    },
     modules = {
       -- uncomment these lines (and the partial comment 2 lines above) for noice.
       -- macro = function()
@@ -56,13 +64,12 @@ M.ui = {
   },
 }
 
-
 vim.api.nvim_create_autocmd("TermOpen", {
   pattern = "*",
   callback = function()
     -- Unset all terminal colors so that the original terminal's colors are used
     for i = 0, 15 do
-      vim.g['terminal_color_' .. i] = nil
+      vim.g["terminal_color_" .. i] = nil
     end
   end,
 })

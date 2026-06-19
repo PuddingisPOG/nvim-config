@@ -9,7 +9,7 @@ return {
     },
     config = function()
       require("dapui").setup()
-      local dap, dapui = require("dap"), require("dapui")
+      local dap, dapui = require "dap", require "dapui"
       dap.listeners.before.attach.dapui_config = function()
         dapui.open()
       end
@@ -22,7 +22,7 @@ return {
       dap.listeners.before.event_exited.dapui_config = function()
         dapui.close()
       end
-    end
+    end,
   },
   {
     "jay-babu/mason-nvim-dap.nvim",
@@ -38,7 +38,7 @@ return {
       },
       handlers = {
         function(config)
-          require('mason-nvim-dap').default_setup(config)
+          require("mason-nvim-dap").default_setup(config)
         end,
         cppdbg = function(config)
           local my_cpp_configs = {
@@ -48,22 +48,22 @@ return {
               request = "launch",
               program = function()
                 -- Get the current file's name without the .cpp extension
-                local executable = vim.fn.expand('%:p:r')
+                local executable = vim.fn.expand "%:p:r"
                 -- Check if the executable exists
                 if vim.fn.filereadable(executable) == 1 then
                   return executable
                 else
-                  vim.notify('Executable not found: ' .. executable, vim.log.levels.ERROR)
+                  vim.notify("Executable not found: " .. executable, vim.log.levels.ERROR)
                   return nil
                 end
               end,
-              cwd = '${workspaceFolder}',
+              cwd = "${workspaceFolder}",
               stopAtEntry = true,
               setupCommands = { -- This allows vectors and other data structures(STL containers) to show the values inside them.
                 {
-                  text = '-enable-pretty-printing',
-                  description = 'enable pretty printing',
-                  ignoreFailures = false
+                  text = "-enable-pretty-printing",
+                  description = "enable pretty printing",
+                  ignoreFailures = false,
                 },
               },
             },
@@ -72,15 +72,15 @@ return {
               type = "cppdbg",
               request = "launch",
               program = function()
-                return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+                return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
               end,
-              cwd = '${workspaceFolder}',
+              cwd = "${workspaceFolder}",
               stopAtEntry = true,
             },
           }
           config.configurations = my_cpp_configs
-          require('mason-nvim-dap').default_setup(config)
-          local dap = require('dap')
+          require("mason-nvim-dap").default_setup(config)
+          local dap = require "dap"
           dap.configurations.cpp = my_cpp_configs
           dap.configurations.c = my_cpp_configs
         end,

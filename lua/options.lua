@@ -10,7 +10,7 @@ o.hlsearch = false
 o.spell = true
 o.wrap = true
 o.linebreak = true
-o.cursorlineopt = 'both' -- to enable cursorline!
+o.cursorlineopt = "both" -- to enable cursorline!
 
 --comment these lines:
 o.cmdheight = 1

@@ -7,9 +7,9 @@ return {
     cmd = { "Typr", "TyprStats" },
   },
   {
-  "nvzone/timerly",
-  dependencies = 'nvzone/volt',
-  cmd = "TimerlyToggle",
-  opts = {} -- optional
+    "nvzone/timerly",
+    dependencies = "nvzone/volt",
+    cmd = "TimerlyToggle",
+    opts = {}, -- optional
   },
 }
