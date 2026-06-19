@@ -26,6 +26,8 @@ M.mason = {
     "stylua",
     "lua-language-server",
     "tinymist",
+    "css-lsp",
+    "html-lsp",
   }
 }
 
