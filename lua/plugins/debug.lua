@@ -76,6 +76,13 @@ return {
               end,
               cwd = "${workspaceFolder}",
               stopAtEntry = true,
+              setupCommands = { -- This allows vectors and other data structures(STL containers) to show the values inside them.
+                {
+                  text = "-enable-pretty-printing",
+                  description = "enable pretty printing",
+                  ignoreFailures = false,
+                },
+              },
             },
           }
           config.configurations = my_cpp_configs
