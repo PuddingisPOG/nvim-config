@@ -54,6 +54,8 @@ map("n", "<leader>ty", "<cmd> TypstPreview <CR>", { desc = "Typst gives a previe
 
 map("n", "<leader>u", "<cmd> UndotreeToggle <CR>", { desc = "Toggles the UndoTree" })
 
+map("n", "<leader>e", "<cmd> Oil <CR>", { desc = "Opens Oil" })
+
 vim.api.nvim_create_user_command("Timer", function()
   vim.o.showtabline = 0
   vim.o.laststatus = 0
