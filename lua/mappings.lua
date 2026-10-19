@@ -107,6 +107,10 @@ map("n", "z=", function()
   })
 end, { desc = "Spelling suggestions" })
 
+map("n", "<leader>lg", function()
+  Snacks.lazygit()
+end, { desc = "Lazygit" })
+
 -- map("n","<leader>ds", "<cmd> Telescope diagnostics <CR>", {desc = "LSP diagnostics list"})
 
 -- terminal
