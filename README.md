@@ -2,7 +2,7 @@ Hey! This is a repo for the Neovim configuration that I wrote and use every day.
 
 **Note: The [GitHub repository](https://github.com/PuddingisPOG/nvim-config) is a mirror of the [Codeberg repository](https://codeberg.org/PuddingisPOG/nvim-config).**
 
-**The legacy config based on [NvChad](https://github.com/NvChad/NvChad) is in the *[nvchad](https://codeberg.org/PuddingisPOG/nvim-config/tree/nvchad)* branch and will basically not be updated moving forward.**
+**The legacy config based on [NvChad](https://github.com/NvChad/NvChad) is in the `nvchad` *branch* ([Codeberg](https://codeberg.org/PuddingisPOG/nvim-config/src/branch/nvchad) / [GitHub](https://github.com/PuddingisPOG/nvim-config/tree/nvchad)) and will basically not be updated moving forward.**
 
 # Dependencies
 
