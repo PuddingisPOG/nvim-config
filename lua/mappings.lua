@@ -19,7 +19,7 @@ map("n", "<leader><", "<C-W><", { desc = "Resize make the window smaller horizon
 map("n", "<Esc>", "<cmd>noh<CR>", { desc = "general clear highlights" })
 
 map({ "n", "x" }, "<leader>fm", function()
-  require("conform").format({ lsp_fallback = true })
+  require("conform").format { lsp_fallback = true }
 end, { desc = "general format file" })
 
 -- global lsp mappings
@@ -70,11 +70,11 @@ map("n", "<leader>fb", function()
 end, { desc = "Find Buffers" })
 
 map("n", "<leader>fc", function()
-  Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
+  Snacks.picker.files { cwd = vim.fn.stdpath "config" }
 end, { desc = "Find files" })
 
 map("n", "<leader>fa", function()
-  Snacks.picker.files({ hidden = true })
+  Snacks.picker.files { hidden = true }
 end, { desc = "Find ALL files" })
 
 map("n", "<leader>fr", function()
@@ -102,9 +102,9 @@ map("n", "th", function()
 end, { desc = "Colorschemes" })
 
 map("n", "z=", function()
-  Snacks.picker.spelling({
+  Snacks.picker.spelling {
     layout = { preset = "select" },
-  })
+  }
 end, { desc = "Spelling suggestions" })
 
 map("n", "<leader>lg", function()
@@ -135,7 +135,7 @@ end, { desc = "terminal toggle floating term" })
 map("n", "<leader>wK", "<cmd>WhichKey <CR>", { desc = "whichkey all keymaps" })
 
 map("n", "<leader>wk", function()
-  vim.cmd("WhichKey " .. vim.fn.input("WhichKey: "))
+  vim.cmd("WhichKey " .. vim.fn.input "WhichKey: ")
 end, { desc = "whichkey query lookup" })
 
 --QoL (Disabled for now due to weird interactions with WhichKey)
