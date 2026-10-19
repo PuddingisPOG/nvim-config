@@ -1,3 +1,5 @@
+**IMPORTANT: THIS BRANCH WILL RARELY BE UPDATED, go to the main branch for the current state of my config. Only use this branch if you like NvChad but I cannot vouch that everything will work well.**
+
 Hey! This is a repo for the Neovim configuration that I use every day.
 
 **Note: The [GitHub repository](https://github.com/PuddingisPOG/nvim-config) is a mirror of the [Codeberg repository](https://codeberg.org/PuddingisPOG/nvim-config).**
@@ -9,8 +11,6 @@ First make sure you have the latest version of Neovim as otherwise some plugins 
 Then, clone this repository:
 
 `git clone https://codeberg.org/PuddingisPOG/nvim-config.git`
-
-You then may or may not (I forgot) have to run `:Lazy sync` inside Neovim on startup so that all the plugins install.
 
 Making sure that you have `npm` and `tree-sitter-cli` installed, run `:TSInstallAll` and `:MasonInstallAll` inside Neovim to get the syntax highlighting and LSPs that I use. 
 
