@@ -1,35 +1,46 @@
-Hey! This is a repo for the Neovim configuration that I use every day.
+Hey! This is a repo for the Neovim configuration that I wrote and use every day.
 
 **Note: The [GitHub repository](https://github.com/PuddingisPOG/nvim-config) is a mirror of the [Codeberg repository](https://codeberg.org/PuddingisPOG/nvim-config).**
 
-# Install
+**The legacy config based on [NvChad](https://github.com/NvChad/NvChad) is in the *[nvchad](https://codeberg.org/PuddingisPOG/nvim-config/tree/nvchad)* branch and will basically not be updated moving forward.**
 
-First make sure you have the latest version of Neovim as otherwise some plugins may not work.
+# Dependencies
 
-Then, clone this repository:
+Make sure you have the following before installing otherwise this config will not work properly.
+
+## Core Dependencies
+- **Neovim `>= 0.11`** (required for native `vim.lsp.config` support)
+- **`git`** (for `lazy.nvim`, `gitsigns.nvim`, and git pickers)
+- **A [Nerd Font](https://www.nerdfonts.com/)** (for icons in the statusline, bufferline, file explorer, and completion menu)
+- **`curl`**, **`tar`**, **`unzip`**, **`gzip`** (used by `mason.nvim`, `blink.cmp`, and `typst-preview.nvim` to download binaries)
+- **Clipboard provider**: `wl-clipboard` (Wayland) or `xclip` / `xsel` (X11) for system clipboard integration
+## Plugin Dependencies
+- **`ripgrep` (`rg`)** is required for live grep in `snacks.nvim`
+- **`fd`** *(optional but recommended)* is used for fast file finding in `snacks.nvim`
+- **`diffutils` (`diff`)** is required by `undotree`
+- **`lazygit`** *(optional)* is for the `snacks.nvim` LazyGit integration
+## Language Runtimes (for Mason LSPs, Formatters & Debuggers)
+`mason-tool-installer.nvim` automatically installs the configured LSP servers, formatters, and debug adapters, but requires these runtimes on your system:
+- **Node.js** and  **`npm`** are required to install `pyright`, `html-lsp`, and `css-lsp`
+- **Python 3 (`python3`, `pip`, `venv`)** are required to install `debugpy` and `clang-format`
+- **`gcc` / `clang` & `gdb`** are required for C/C++ compilation and debugging with `cpptools`
+
+# Installation
+
+Clone this repository below and then run `nvim`; it's as simple as that `:D`. You will mostly need to run `:restart` once in nvim so that the line numbers show up properly.
 
 `git clone https://codeberg.org/PuddingisPOG/nvim-config.git`
 
-You then may or may not (I forgot) have to run `:Lazy sync` inside Neovim on startup so that all the plugins install.
-
-Making sure that you have `npm` and `tree-sitter-cli` installed, run `:TSInstallAll` and `:MasonInstallAll` inside Neovim to get the syntax highlighting and LSPs that I use. 
-
-If you optionally (but I strongly recommend) want [Telescope](https://github.com/nvim-telescope/telescope.nvim) to work, make sure you have `ripgrep` installed.
-
-You may now delete the `.git` folder inside your config, so you can go ahead and make your own changes to the configuration :)
+You may choose to delete the `.git` folder inside your config if you do not require version control to free up space. Or, feel free to use your own repo to track changes.
 
 # Uninstall
 
 Run:
 
-```
+```zsh
 rm -rf ~/.config/nvim
 rm -rf ~/.local/state/nvim
 rm -rf ~/.local/share/nvim
 ```
 
-For more detail, especially if you're on windows or have installed Neovim from Flatpak check the [NvChad Docs](https://nvchad.com/docs/quickstart/install/).
-
-# Credits
-
-[NvChad](https://github.com/NvChad/NvChad), for giving me a starting point for this configuration.
+and remove any unneeded depends.
