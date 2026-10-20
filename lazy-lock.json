@@ -24,6 +24,7 @@
   "oil-lsp-diagnostics.nvim": { "branch": "master", "commit": "282308383d8d8485937aaf3c28b44fa1cb26007a" },
   "oil.nvim": { "branch": "master", "commit": "d3733d933833a0e59b813ecec99341527adf0c28" },
   "presence.nvim": { "branch": "main", "commit": "87c857a56b7703f976d3a5ef15967d80508df6e6" },
+  "rainbow-delimiters.nvim": { "branch": "master", "commit": "b55decda611755171bc5bf8f4c99603a75de4b41" },
   "rose-pine": { "branch": "main", "commit": "ff483051a47e27d84bdef47703538df1ed9f4a47" },
   "snacks.nvim": { "branch": "main", "commit": "882c996cf28183f4d63640de0b4c02ec886d01f2" },
   "typst-preview.nvim": { "branch": "master", "commit": "325036ee145ca51d9efb145c09ac16bce3bc8b7d" },
