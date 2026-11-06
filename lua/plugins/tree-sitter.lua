@@ -9,7 +9,7 @@ return {
     lazy = false,
     build = ":TSUpdate",
     config = function()
-      require("nvim-treesitter").install { "cpp", "html", "css", "python", "typst" }
+      require("nvim-treesitter").install { "cpp", "html", "css", "python", "typst", "json" }
     end,
   },
 }
