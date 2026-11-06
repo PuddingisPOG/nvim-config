@@ -15,6 +15,7 @@ Make sure you have the following before installing otherwise this config will no
 - **`curl`**, **`tar`**, **`unzip`**, **`gzip`** (used by `mason.nvim`, `blink.cmp`, and `typst-preview.nvim` to download binaries)
 - **Clipboard provider**: `wl-clipboard` (Wayland) or `xclip` / `xsel` (X11) for system clipboard integration
 ## Plugin Dependencies
+- **Neovim `>= 0.12` and `treesiter-cli`(from os package manager not `npm`)** (required for `nvim-treesitter`)
 - **`ripgrep` (`rg`)** is required for live grep in `snacks.nvim`
 - **`fd`** *(optional but recommended)* is used for fast file finding in `snacks.nvim`
 - **`diffutils` (`diff`)** is required by `undotree`
