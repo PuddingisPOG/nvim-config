@@ -97,6 +97,10 @@ map("n", "<leader>sm", function()
   Snacks.picker.marks()
 end, { desc = "Search Marks" })
 
+map("n", "<leader>sh", function()
+  Snacks.picker.help()
+end, { desc = "Help Pages" })
+
 map("n", "th", function()
   Snacks.picker.colorschemes()
 end, { desc = "Colorschemes" })
